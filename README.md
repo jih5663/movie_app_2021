@@ -3,41 +3,34 @@
 
 ## [ 09월 29일 ]
 <br>
-## 대제목
+##컴포넌트 만들기
 
--  순서 목록1
--  순서 목록2<br>
-**볼드체 만들기**
-<!-- Code -->
-`To print(인라인형태로 코드저장!)`
-------------------
-<o>1.서브 목록<br>
-테스트 테스트
+-  prop-type설치하기<br>
+```
+> npm install prop-types
+```
+-  정상설치여부확인<br>
+**> packe.json파일을 열어depencies키에 있는 값보고**
+**> prop-types가 등록되어 있으면 설치가정상적으로 된 것**
+**> importPropTypes from'prop-types';를 app.js파일 맨위 추가**
+------
+##state와 클래스형 컴포넌트
 
--  순서 목록1
--  순서 목록2<br>
-**볼드체 만들기**
-<!-- Code -->
-`To print(!)`
-------------------
-<o>1.서브 목록<br>
-테스트 테스트
+-  props는 정적인 데이터만 다룰 수 있다.
+-  정상설치여부확인
+-  state는 동적인 데이터를 다루기 위해 사용된다.
+-  기존의 App.js는 04-App.js로 이름을 바꾸고 새로운 App.js 파일을 생성한다.
 
--  순서 목록1
--  순서 목록2<br>
-**볼드체 만들기**
-<!-- Code -->
-`To print(!)`
-------------------
-<o>1.서브 목록<br>
-테스트 테스트
-
+- 클래스형 컴포넌트는 render()함수가 JSX를 반환한다.
 ```javascript
-console.log(your.message)
-문법 하이라이트하기
-코드블럭
+import React, {component}from 'react'
+class App extends Conponent {
+
+}
+export dafault App
 ```
 
+-----
 
 
 <br>
