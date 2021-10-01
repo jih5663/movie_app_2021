@@ -10,8 +10,8 @@
 > npm install prop-types
 ```
 -  정상설치여부확인<br>
-**> packe.json파일을 열어depencies키에 있는 값보고**
-**> prop-types가 등록되어 있으면 설치가정상적으로 된 것**
+**> packe.json파일을 열어depencies키에 있는 값보고**<br>
+**> prop-types가 등록되어 있으면 설치가정상적으로 된 것**<br>
 **> importPropTypes from'prop-types';를 app.js파일 맨위 추가**
 ------
 ##state와 클래스형 컴포넌트
