@@ -1,6 +1,49 @@
 <h3># 장인혁 201840131<h3>
 <br>
 
+## [ 10월 06일 ]
+<br>
+##영화 앱 만들기
+
+-  axios설치하기<br>
+```
+> npm install axios
+```
+-  노머드 코더 영화 API사용<br>
+- YTS의 endpoint /list_movies.json을 사용하려면 yts-proxy.now.sh에 /list_movies.json을 붙이
+면 된다<br>
+
+- **주소창에 yts-proxy.now.sh/movie_details.json라고 접속하면 아무 것도 출력되지 않는다. • API가 movie_id라는 조건을 요구하기 때문이다.** 
+<br>
+
+> importPropTypes from'prop-types';를 app.js파일 맨위 추가
+------
+##axios의 동작 확인
+
+-  getMovies()함수를 만들고, 이 함수 안에서 axios.get()이 실행하도록 한다.
+-  axios.get()의 return값은 movies에 저장한다.
+-  componentDidMount()함수가 실행되면 this.getMovie()가 실행된다
+-  이때 자바스크립트에게 getMovies()함수는 시간이 필요하다는 것을 알려야 하는데 이때 사용되는
+것이 async, await 이다.
+
+- ES6에서는 객체의 키와 대입할 변수의 이름이 같다면 코드를 축약할 수 있다. 
+- this.setState({ movies: movies })를 this.setState({ movies })로 수정한다
+```javascript
+this.seTState({movies:movies})
+this.setState({movies})
+```
+
+-----
+
+
+<br>
+<br>
+<br>
+<br>
+
+
+
+
 ## [ 09월 29일 ]
 <br>
 ##컴포넌트 만들기
