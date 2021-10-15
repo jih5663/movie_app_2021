@@ -1,6 +1,91 @@
 <h3># 장인혁 201840131<h3>
 <br>
 
+
+## [ 10월 13일 ]
+<br>
+# 영화 앱 만들기
+
+- css 적용 전 prop 값 html태그로 묶어주기
+```javascript
+function Movie({ id, year, title, summary, poster }) {
+  return (
+    <div class="movie">
+      <img src={poster} alt={title} title={title} />
+      <div class="movie-data">
+        <h3 class="movie-title">{title}</h3>
+        <h5 class="movie-year">{year}</h5>
+        <p class="movie-summary">{summary}</p>
+      </div>
+    </div>
+  );
+}
+```
+- Movie영화 데이터 정의,관리를 위해 prop types를 사용  
+```javascript
+> import PropTypes from'prop-types';  
+funtion Movies(){  
+    return <h1><h2>;  
+}  
+Movie.propTypes = {};  
+export defalut Movie;
+```
+##영화장르 출력하기
+- Movie컴포넌트에서 장르를 출력하도록 코드를 수정한다.  
+- genres props가 배열이므로 map()함수를 사용한다.
+- genres props를 ul, li 태그로 감싸서 출력한다.
+- console을 확인하면 kye props가 없다는 메시지가 나온다.
+```javascript
+function Movie({ id, year, title, summary, poster, genres }) {
+  return (
+    <div className="movie">
+      <img src={poster} alt={title} title={title} />
+      <div className="movie-data">
+        <h3 className="movie-title">{title}</h3>
+        <h5 className="movie-year">{year}</h5>
+        <ul className="movie-genres">
+          {genres.map(genre => {
+            return <li>{genre}</li>;
+          })}
+        </ul>
+        <p className="movie-summary">{summary}</p>
+      </div>
+    </div>
+  );
+}
+```
+
+
+------
+##li tag에 key props 추가하기
+
+-  장르에는 key값으로 사용하기에 적당한 id값 같은 것이 없다. 
+-  이럴 경우 새롭게 만들에 내야 하는데, map()함수에는 2번째 매개변수를 지정할 경우 배열의 index
+값을 반환해 주는 기능이 있다. 
+-  이것을 이용해서 배열의 인덱스를 key props로 활용하는 것이다. 
+-  console을 확인해 본다.
+
+
+```javascript
+<ul className="movie__genres">
+    {genre.map((genre,index) => {
+        return (
+            <li key={index}className="movie__genre">
+            {genre}
+            </li>
+        );
+    })}
+</ul>
+```
+
+-----
+   
+   
+
+   
+
+
+
 ## [ 10월 06일 ]
 <br>
 ##영화 앱 만들기
