@@ -56,7 +56,7 @@ function Movie({ id, year, title, summary, poster, genres }) {
 ```
 
 
-------
+
 ##li tag에 key props 추가하기
 
 -  장르에는 key값으로 사용하기에 적당한 id값 같은 것이 없다. 
