@@ -1,6 +1,73 @@
 <h3># 장인혁 201840131<h3>
 <br>
 
+## [ 10월 27일 ]
+<br>
+# 영화 앱에 여러가지 기능 추가하기
+
+- About.js의 내용 수정
+ ```javascript
+import './About.css'
+
+function About(props) {
+  console.log(props);
+  return (
+    <div className="about-container">
+    <span>
+    Freedom is the freedom to sat that two ake four. If that is granted, all else follws."
+    </span>
+    <span>- George Orwell,,1984(/span)
+  )
+}
+ ```
+
+- 자바스크립트 slice함수를 사용해 summary의 문자열을
+0번째부터 180번째 까지 자른 내용만 보여주게 만들어준다.
+```javascript
+<p className="movie-summary">{summary.slice(0, 180)}...</p>
+```
+- About 컴포넌트 내보내기  
+```javascript
+function About() {
+  return <span>About Component.</span>;
+}
+export default About;
+```
+> 메뉴를 클릭하면 화면이 이동할 수 있도록 라우터 사용
+- react-router-dom 설치하기  
+- components 폴더에 Movie 컴포넌트 옮기기
+- routes 폴어게 라우터가 보여줄 화면 만들기
+- Home.js 수정하기
+- Home.css 생성 / App.js 수정
+- routes , components 폴더 생성
+- Movie.js / Movie.css 파일 components폴더에 넣기
+- routes폴더에 About.js, Home.js, Home.css 생성
+- App.js 폴더의 모든 내용을 Home.js에 붙여넣기
+- App.js 기존 내용 삭제 후 route실습
+
+```javascript
+import { Link } from "react-router-dom";
+
+function Navigation() {
+  return (
+    <div>
+      <Link to="/">Home</Link>
+      <Link to="/about">About</Link>
+    </div>
+  );
+}
+
+export default Navigation;
+```
+- router사용 후 주소에 hash(#)가 나타나는 현상 없애려면    
+HashRouter 대신 BrowserRouter사용하기
+
+
+
+
+-----
+
+
 
 ## [ 10월 13일 ]
 <br>
