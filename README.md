@@ -1,6 +1,66 @@
 <h3># 장인혁 201840131<h3>
 <br>
 
+
+
+## [ 11월 03일 ]
+<br>
+# 영화 제목 출력하기
+
+
+ ```javascript
+class Detail extends React.Component {
+  componentDidMount() {
+    const { location, history } = this.props;
+    if (location.state === undefined) {
+      history.push("/");
+    }
+  }
+
+  render() {
+    const { location } = this.props;
+    if (location.state) {
+      return <span>{location.state.title}</span>;
+    } else {
+      return null;
+    }
+  }
+}
+ ```
+
+- props값으로 받아온 영화데이터를 span태그를 사용해 출력 및 만들어준다.
+- location.state가 없으면 render함수가 null을 반환
+
+> App.js에 Route컴포넌트 추가  
+```javascript
+import Detail from "./routes/Detail";
+<Route path="/movie-detail" component={Detail} />;
+
+```
+> Movie.js에 Link컴포넌트 추가
+```javascript
+<Link to={{ pathname: "/movie-detail", state: { year, title, summary, poster, genres } }}>
+```
+> 리다이렉트 기능 만들어 보기  
+
+• 리다이렉트 기능을 사용하기 위해서는 route props의 history 키를 활용해야 한다.  
+• history키에는 push, go, goBack, goForward와 같은 키가 있으며, 그 키에는 URL을 변경해 주는함수들이 있다.   
+• 이 함수들을 이용해서 리다이렉트 기능을 구현한다.
+> History 키 살펴보기    
+
+• 주소창에 localhost:3000을 입력해서 이동한 다음 아무 영화나 눌러 이동한다.  
+• console에서 history에 출력된 값을 확인한다.  
+• 액션03에서는 componentDidMount() 생명주기 함수를 사용해 Detail 컴포넌트가 마운트될 때push()함수를 실행하도록 한다.
+
+
+
+
+
+
+-----
+
+
+
 ## [ 10월 27일 ]
 <br>
 # 영화 앱에 여러가지 기능 추가하기
